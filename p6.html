@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            gap: 100px;
+            flex-wrap: wrap;
+            padding: 5%;
+        }
+        .card{
+            width: 300px;
+            height: 300px;
+            background-color: var(--i);
+            border-radius: var(--r);
+            outline: var(--j) solid var(--i);
+            outline-offset: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="--i:#811313;--j:10px;--r:10px"></div>
+        <div class="card" style="--i:rgb(25, 212, 25);--j:20px;--r:30px"></div>
+        <div class="card" style="--i:rgb(0, 255, 170);--j:30px;--r:60px"></div>
+        <div class="card" style="--i:rgb(219, 175, 54);--j:40px;--r:90px"></div>
+
+    </div>
+</body>
+</html>

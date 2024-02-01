@@ -1,0 +1,147 @@
+
+.commonAnimation{
+    padding: 30px;
+    border-radius: 10px;
+    margin: 30px;
+    height: 300px;
+}
+.commonAnimation>h1{
+    text-align: center;
+    font-size: 1.5rem;
+    text-shadow: 2px 5px 3px #636363;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+}
+
+.animation1{
+    background-color: teal;
+    animation: myanimation 0.7s infinite alternate;
+}
+@keyframes myanimation{
+    from{
+        background: #636363;
+        border-radius: 0;
+        border: 0px solid #000;
+        color: yellow;
+        transform: scale(0.9);
+    }
+    to{
+        background: red;
+        border-radius: 100px;
+        border: 10px solid #000;
+        color: #fff;
+        transform: scale(1);
+    }
+}
+
+/* example2 */
+.battery{
+    width: 200px;
+    height: 300px;
+    border-radius: 5px;
+    background-color: #0c0c0c;
+    position: relative;
+    overflow: hidden;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.battery::before{
+    content: "";
+    width: 100%;
+    height: 1%;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    animation:  charge 10s infinite;
+}
+@keyframes charge{
+    0%{
+        height: 1%;
+        background-color: red;
+    }
+    10%{
+        height: 10%;
+        background-color: red;
+    }
+    100%{
+        height: 100%;
+        background-color: green;
+    }
+}
+
+/* p2.html */
+.animation2{
+    animation: myAnimation2 5s infinite alternate;
+    height: 300px;
+    width: 300px;
+    border-radius: 100px;
+    background: url(https://i.pinimg.com/736x/8d/63/19/8d6319bdb4657312ad4ca80e3dc876b1.jpg) no-repeat center;
+    background-size: cover;
+}
+@keyframes myAnimation2{
+    0%{
+      background-position: left;
+      border-radius: 0;
+    }
+    25%{
+        background-position: top;    
+    }
+    50%{
+        background-position: right;
+      }
+      75%{
+          background-position: bottom;    
+      }
+      100%{
+        background-position:center;
+        border-radius: 100%;
+      }
+}
+
+/* p4.html */
+.animation3{
+    position: relative;
+    overflow: hidden;
+    background-color: #0c0c0c;
+    width: 100%;
+    height: 100vh;
+}
+.card{
+    position: absolute;
+    animation: animation1 10s infinite alternate;
+    width: 100px;
+    height: 100px;
+}
+@keyframes animation1{
+    0%{
+        top: 0px;
+        left: 0px;
+        background: #fc466c;
+    }
+    25%{
+        top: 0px;
+        left: 600px;
+        background: #5246fc;
+    }
+    50%{
+        top: 400px;
+        left: 600px;
+        background: #fce146;
+    }
+    75%{
+        top: 400px;
+        left: 0px;
+        background: #5bd719;
+    }
+    100%{
+        top: 0px;
+        left: 0px;
+        background: #46c5fc;
+    }
+
+}
